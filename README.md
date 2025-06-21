@@ -1,6 +1,14 @@
 # 📁 Drive-Clone – Google Drive Clone
+![Screenshot 2025-06-21 163115](https://github.com/user-attachments/assets/8f75b7c3-bb12-4d96-a786-4da5b05f5cee)
+
+![Screenshot 2025-06-21 163132](https://github.com/user-attachments/assets/49f20bfd-ba2a-4ab2-b00f-5f21bbe773e2)
+
+![Screenshot 2025-06-21 163153](https://github.com/user-attachments/assets/2890b8cc-697c-4939-af37-b9486383930a)
+
 
 A full-stack cloud storage web app that replicates core features of Google Drive — allowing users to upload, preview, download, and organize files securely.
+
+
 
 ## 🚀 Live Demo
 

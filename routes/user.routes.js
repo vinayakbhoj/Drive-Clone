@@ -87,4 +87,20 @@ router.post('/login',
 
 })
 
+// url - /user/logout
+router.get('/logout', (req, res) => {
+    // Here you would typically handle user logout logic
+    // For example, you might clear the session or token
+    
+    // Verify the token
+    res.clearCookie('token');
+    // Clear the cookie
+    if (!req.cookies.token) {
+        return res.status(400).json({ message: "No user is logged in" });
+    }
+    const token = req.cookies.token;
+
+    res.redirect('/');
+})
+
 module.exports = router;

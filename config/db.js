@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 
 function connectDB() {
-    mongoose.connect(process.env.MONGO_URI).then(() => {
+    mongoose.connect(process.env.ATLASDB_URL).then(() => {
         console.log('MongoDB connected successfully');
     })
 }

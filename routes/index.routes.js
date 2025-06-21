@@ -6,12 +6,15 @@ const upload = multer({ storage })
 const fileModel = require('../models/files.models');
 const authMiddleware = require('../middlewares/authe');
 
+router.get('/', (req, res) => {
+    res.render('index')
+})
+
 router.get('/home', authMiddleware, async(req, res) => {
     const userFiles = await fileModel.find({
         user: req.user.userId // Assuming req.user is set after authentication middleware
     })
-    const newPath = ``
-    console.log(userFiles[0].path);
+ 
     
     res.render('home', {
         files: userFiles

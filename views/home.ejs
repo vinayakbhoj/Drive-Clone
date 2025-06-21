@@ -62,7 +62,7 @@
                     </div>
                     
                     
-                    <a href="<%= file.path %>"  class="text-blue-600 dark:text-blue-400 hover:underline" download>Download</a>
+                    <a href="<%= file.path %>"  class="text-blue-600 dark:text-blue-400 hover:underline" download>Preview</a>
 
 
                 </div>
@@ -87,25 +87,6 @@
         function hidePop() {
             document.querySelector('.pop').style.display = 'none';
         }
-
-        // Function to handle file download
-        function convertToDownloadableUrl(originalUrl) {
-  const uploadSegment = '/upload/';
-  const uploadIndex = originalUrl.indexOf(uploadSegment);
-
-  if (uploadIndex === -1) return originalUrl; // if not found, return original
-
-  // Split the URL into two parts
-  const prefix = originalUrl.slice(0, uploadIndex + uploadSegment.length); // till /upload/
-  const suffix = originalUrl.slice(uploadIndex + uploadSegment.length);    // after /upload/
-
-  // Remove version part (e.g., v1750438856/)
-  const suffixWithoutVersion = suffix.replace(/^v\d+\/?/, '');
-
-  // Return new URL with fl_attachment inserted
-  return `${prefix}fl_attachment/${suffixWithoutVersion}`;
-}
-
 
 
 

@@ -23,7 +23,10 @@ app.use('/', indexRouter);
 app.use('/user', UserRouter);
 
 
-
+process.on('uncaughtException', (err) => {
+    console.log('Uncaught Exception:', err);
+    
+})
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
